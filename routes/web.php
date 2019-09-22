@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('users', 'UserController');
+Route::get('users', 'UserController@index');
+Route::post('users/edit/{id}', 'UserController@edit');
 
